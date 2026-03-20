@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title> Трансформация и анимация</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="http://d3js.org/d3.v7.min.js"> </script>
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/image.js"></script>
+    <script src="JavaScript/path.js"></script>
+  </head>
+  <body>
+    <form id="setting">
+        <fieldset>
+            <div class=formBlock>
+                <p><b>Координаты начала</b><br>
+                <label for="cx">x: </label>
+                <input type="number" id="cx" value="300" max="600" min="0">
+                <label for="cy">y: </label>
+                <input type="number" id="cy" value="300" max="600" min="0"><br>
+                </p>
+                <label for="showPaths">Показывать траектории?</label>
+                <input type="checkbox" id="showPaths">
+            </div>
+            <div class="formBlock">
+              <p><b>Направление</b><br>
+              <select value="0" id="animationDirection">
+                  <option value="0">Прямое</option>
+                  <option value="1">Обратное</option>
+              </select>
+            </div>
+            <div class=formBlock>
+                <p><b>Скорость анимации</b><br>
+                <label for="cx">Секунды: </label>
+                <input type="number" id="animationSpeed" value="1" max="20" min="0.01">
+                </p>
+            </div>
+            <p><input type="button" value="Анимировать" id="animateBtn"></p>
+            <p><input type="button" value="Очистить поле" id="clearBtn"></p>
+        </fieldset>
+     </form>
+     <form id="effects">
+        <fieldset>
+          <legend>Эффекты</legend>
+          <div class="formBlock nopath__mode">
+              <p><b>Изменение масштаба</b><br>
+              <label for="zoomx">по x: </label>
+              <input type="number" id="zoomx" value="1" max="50" min="1">
+              <label for="zoomx_finish">до: </label>
+              <input type="number" id="zoomx_finish" value="1" max="50" min="1"><br>
+              <label for="zoomy">по y: </label>
+              <input type="number" id="zoomy" value="1" max="50" min="1">
+              <label for="zoomy_finish">до: </label>
+              <input type="number" id="zoomy_finish" value="1" max="50" min="1">
+              </p>
+          </div>
+          <div class="formBlock nopath__mode">
+              <p><b>Изменение поворота</b><br>
+              <label for="angle">угол: </label>
+              <input type="number" id="angle" value="0" max="360" min="0">
+              <label for="angle_finish">до: </label>
+              <input type="number" id="angle_finish" value="0" max="360" min="0"><br>
+              </p>
+          </div>
+        </fieldset>
+    <p>
+  </form>
+    <svg></svg>
+
+  </body>
+</html>
