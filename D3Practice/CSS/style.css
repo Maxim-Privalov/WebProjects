@@ -1,0 +1,44 @@
+table {
+    border: 1px solid black;
+    border-spacing: 0;
+    margin: 1rem 0;
+}
+
+tr:nth-child(odd) {
+    background: rgb(251, 243, 243);
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 0.6em;
+}
+
+th {
+    background: lightgrey;
+}
+svg {
+    width: 800px;
+    height: 400px;
+}
+
+svg path, line {
+    fill: none;
+    stroke: black;
+    width: 1px;
+}
+
+svg text {
+    font: 8px Verdana;
+}
+
+#chartForm div {
+    margin: 1.5rem 0;
+}
+
+#error {
+    color: red;
+}
+
+#hideTableBtn {
+    display: block;
+}
